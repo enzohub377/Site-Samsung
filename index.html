@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,26 +11,26 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Samsung</title>
+    <title>brand-logo</title>
   </head>
   <body>
-    <header id="Inicio">
-      <div id="container-header">
-        <h1 id="Samsung">Samgung</h1>
+    <header id="home">
+      <div id="site-header">
+        <h1 id="brand-logo">Samgung</h1>
 
         <nav>
           <button class="menu-burger"></button>
 
-          <ul id="container-Atalhos">
-            <li><a class="Atalho" href="#Novidade">Início</a></li>
-            <li><a class="Atalho" href="#Mobile">Mobile</a></li>
-            <li><a class="Atalho" href="#TV-AV">TV & AV</a></li>
+          <ul id="nav-menu">
+            <li><a class="nav-link" href="#hero">Início</a></li>
             <li>
-              <a class="Atalho" href="#Computadores-Monitores"
-                >Computadores e Monitores</a
-              >
+              <a class="nav-link" href="#mobile-products">mobile-products</a>
             </li>
-            <li><a class="Atalho" href="#Acessorios">Acessórios</a></li>
+            <li><a class="nav-link" href="#tv-audio">TV & AV</a></li>
+            <li>
+              <a class="nav-link" href="#computers">Computadores e Monitores</a>
+            </li>
+            <li><a class="nav-link" href="#accessories">Acessórios</a></li>
           </ul>
         </nav>
       </div>
@@ -38,65 +38,57 @@
       <div class="container-input">
         <input type="text" placeholder="Pesquisar" />
 
-        <div class="Icones">
-          <img
-            class="Icone"
-            src="Imagens/Icone-CarrinhoDeCompras.png"
-            alt="Icone de Carrinho de compras"
-          />
+        <div class="header-actions">
+          <img class="icon" src="assets/" alt="icon de Carrinho de compras" />
 
-          <img
-            class="Icone"
-            src="Imagens/Icone-Usuario.png"
-            alt="Icone de Usuario"
-          />
+          <img class="icon" src="assets/" alt="icon de Usuario" />
         </div>
       </div>
     </header>
 
-    <section id="Novidade">
+    <section id="hero">
       <article>
         <img
-          id="mudarImage"
-          class="NovoProduto"
-          src="Imagens/Novo Galaxy Watch Samsung.svg"
+          id="featured-image"
+          class="hero-product-image"
+          src="assets/galaxy-watch-new.svg"
           alt="Imagem de Relógio Galaxy Watch8 Classic (LTE, 46 mm)"
         />
 
-        <div id="SobreANovidade">
-          <div id="Oproduto">
-            <h2 id="Novo">Novidade!</h2>
+        <div id="hero-content">
+          <div id="product-header">
+            <h2 id="Novo">hero!</h2>
 
             <h3>Galaxy Watch8 Classic (LTE, 46 mm)</h3>
           </div>
 
           <div id="pontualidadeCores">
-            <div class="Pontualidade">
+            <div class="rating">
               <img
                 id="Nota"
-                class="Icone"
-                src="Imagens/Icone-Estrela.png"
+                class="icon"
+                src="assets/icons/icon-star.png"
                 alt="Estrela"
               />
 
               <h3>4.7 (1594)</h3>
             </div>
 
-            <div class="EscolhaCor">
-              <div id="EscolhaPrata" class="corEscolhida"></div>
+            <div class="color-picker">
+              <div id="EscolhaPrata" class="color-option"></div>
 
-              <div id="EscolhaGrafite" class="corEscolhida"></div>
+              <div id="EscolhaGrafite" class="color-option"></div>
             </div>
           </div>
 
-          <div id="NovidadeDetalhes">
+          <div id="product-details">
             <div id="Nome">
-              <p id="NomeProduto">Galaxy Watch8 (Bluetooth, 44 mm)</p>
+              <p id="product-name">Galaxy Watch8 (Bluetooth, 44 mm)</p>
 
               <h5>Prata / Grafite</h5>
             </div>
 
-            <div id="NovidadeCompra">
+            <div id="purchase-card">
               <h3>R$2.879,10 à vista (10% de desconto)</h3>
 
               <h5 id="NovoOferta">
@@ -105,84 +97,84 @@
 
               <h4><s>R$ 3.199,00</s> R$319,90 off</h4>
 
-              <button id="ComprarNovidade">Compre Agora</button>
+              <button id="Comprarhero">Compre Agora</button>
             </div>
           </div>
         </div>
       </article>
     </section>
 
-    <div class="Categoria">
-      <h2>Mobile</h2>
+    <div class="section-header">
+      <h2>mobile-products</h2>
     </div>
 
-    <section id="Mobile">
-      <div class="cardMobile">
+    <section id="mobile-products">
+      <div class="cardmobile-products">
         <img
-          class="ItensMobile"
-          src="Imagens/Mobile1.png"
+          class="Itensmobile-products"
+          src="assets/Mobile1.png"
           alt="Imagem de Galaxy S25 Ultra com fundo preto"
         />
-        <div class="overlayMobile">
-          <div class="TextContent">
+        <div class="overlaymobile-products">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
 
-      <div class="cardMobile">
+      <div class="cardmobile-products">
         <img
-          class="ItensMobile"
-          src="Imagens/Mobile2.png"
-          alt="Samsung Galaxy Watch8 Classic (LTE, 46 mm)"
+          class="Itensmobile-products"
+          src="assets/mobile2.png"
+          alt="brand-logo Galaxy Watch8 Classic (LTE, 46 mm)"
         />
-        <div class="overlayMobile">
-          <div class="TextContent">
+        <div class="overlaymobile-products">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
 
-      <div class="cardMobile">
+      <div class="cardmobile-products">
         <img
-          class="ItensMobile"
-          src="Imagens/Mobile3.png"
-          alt="Fone de ouvido Samsung Galaxy Buds FE"
+          class="Itensmobile-products"
+          src="assets/Mobile3.png"
+          alt="Fone de ouvido brand-logo Galaxy Buds FE"
         />
-        <div class="overlayMobile">
-          <div class="TextContent">
+        <div class="overlaymobile-products">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
 
-      <div class="cardMobile">
+      <div class="cardmobile-products">
         <img
-          class="ItensMobile"
-          src="Imagens/Mobile4.png"
+          class="Itensmobile-products"
+          src="assets/Mobile4.png"
           alt="Anel Galaxy Ring"
         />
-        <div class="overlayMobile">
-          <div class="TextContent">
+        <div class="overlaymobile-products">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
 
-      <div class="cardMobile">
+      <div class="cardmobile-products">
         <img
-          class="ItensMobile"
-          src="Imagens/Mobile5.png"
-          alt="Tablet Samsung Galaxy Tab A9+"
+          class="Itensmobile-products"
+          src="assets/Mobile5.png"
+          alt="Tablet brand-logo Galaxy Tab A9+"
         />
-        <div class="overlayMobile">
-          <div class="TextContent">
+        <div class="overlaymobile-products">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
@@ -190,49 +182,49 @@
 
     <hr />
 
-    <div class="Categoria">
+    <div class="section-header">
       <h2>TV & AV</h2>
     </div>
 
-    <section id="TV-AV">
-      <div class="cardTV-AV">
+    <section id="tv-audio">
+      <div class="cardtv-audio">
         <img
-          class="ItensTV-AV"
-          src="Imagens/TV-AV1.png"
-          alt="Samsung Vision AI TV 43 polegadas Neo QLED 4K QN90F 2025"
+          class="Itenstv-audio"
+          src="assets/TV-AV1.png"
+          alt="brand-logo Vision AI TV 43 polegadas Neo QLED 4K QN90F 2025"
         />
-        <div class="overlayTV-AV">
-          <div class="TextContent">
+        <div class="overlaytv-audio">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
 
-      <div class="cardTV-AV">
+      <div class="cardtv-audio">
         <img
-          class="ItensTV-AV"
-          src="Imagens/TV-AV2.png"
-          alt="Samsung Vision AI TV 43 polegadas Neo QLED 4K QN90F 2025"
+          class="Itenstv-audio"
+          src="assets/TV-AV2.png"
+          alt="brand-logo Vision AI TV 43 polegadas Neo QLED 4K QN90F 2025"
         />
-        <div class="overlayTV-AV">
-          <div class="TextContent">
+        <div class="overlaytv-audio">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
 
-      <div class="cardTV-AV">
+      <div class="cardtv-audio">
         <img
-          class="ItensTV-AV"
-          src="Imagens/TV-AV3.png"
-          alt="Samsung Vision AI TV 43 polegadas Neo QLED 4K QN90F 2025"
+          class="Itenstv-audio"
+          src="assets/TV-AV3.png"
+          alt="brand-logo Vision AI TV 43 polegadas Neo QLED 4K QN90F 2025"
         />
-        <div class="overlayTV-AV">
-          <div class="TextContent">
+        <div class="overlaytv-audio">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
@@ -240,49 +232,49 @@
 
     <hr />
 
-    <div class="Categoria">
+    <div class="section-header">
       <h2>Computadores e Monitores</h2>
     </div>
 
-    <section id="Computadores-Monitores">
-      <div class="cardComputadores-Monitores">
+    <section id="computers">
+      <div class="cardcomputers">
         <img
-          class="ItensComputadores-Monitores"
-          src="Imagens/Computadores-Monitores1.png"
-          alt="Samsung Vision AI TV 43 polegadas Neo QLED 4K QN90F 2025"
+          class="Itenscomputers"
+          src="assets/computer-monitor1.png"
+          alt="brand-logo Vision AI TV 43 polegadas Neo QLED 4K QN90F 2025"
         />
-        <div class="overlayComputadores-Monitores">
-          <div class="TextContent">
+        <div class="overlaycomputers">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
 
-      <div class="cardComputadores-Monitores">
+      <div class="cardcomputers">
         <img
-          class="ItensComputadores-Monitores"
-          src="Imagens/Computadores-Monitores2.png"
-          alt="Samsung Vision AI TV 43 polegadas Neo QLED 4K QN90F 2025"
+          class="Itenscomputers"
+          src="assets/computer-monitor2.png"
+          alt="brand-logo Vision AI TV 43 polegadas Neo QLED 4K QN90F 2025"
         />
-        <div class="overlayComputadores-Monitores">
-          <div class="TextContent">
+        <div class="overlaycomputers">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
 
-      <div class="cardComputadores-Monitores">
+      <div class="cardcomputers">
         <img
-          class="ItensComputadores-Monitores"
-          src="Imagens/Computadores-Monitores3.png"
-          alt="Samsung Galaxy Book4"
+          class="Itenscomputers"
+          src="assets/computer-monitor3.png"
+          alt="brand-logo Galaxy Book4"
         />
-        <div class="overlayComputadores-Monitores">
-          <div class="TextContent">
+        <div class="overlaycomputers">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
@@ -290,165 +282,136 @@
 
     <hr />
 
-    <div class="Categoria">
+    <div class="section-header">
       <h2>Acessórios</h2>
     </div>
 
-    <section id="Acessorios">
-      <div class="cardAcessorios">
+    <section id="accessories">
+      <div class="cardaccessories">
         <img
-          class="ItensAcessorios"
-          src="Imagens/Acessórios1.png"
-          alt="Samsung Galaxy Book4"
+          class="Itensaccessories"
+          src="assets/accessory1.png"
+          alt="brand-logo Galaxy Book4"
         />
-        <div class="overlayAcessorios">
-          <div class="TextContent">
+        <div class="overlayaccessories">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
 
-      <div class="cardAcessorios">
+      <div class="cardaccessories">
         <img
-          class="ItensAcessorios"
-          src="Imagens/Acessórios2.png"
-          alt="Samsung Galaxy Book4"
+          class="Itensaccessories"
+          src="assets/accessory2.png"
+          alt="brand-logo Galaxy Book4"
         />
-        <div class="overlayAcessorios">
-          <div class="TextContent">
+        <div class="overlayaccessories">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
 
-      <div class="cardAcessorios">
+      <div class="cardaccessories">
         <img
-          class="ItensAcessorios"
-          src="Imagens/Acessórios3.png"
-          alt="Samsung Galaxy Book4"
+          class="Itensaccessories"
+          src="assets/accessory3.png"
+          alt="brand-logo Galaxy Book4"
         />
-        <div class="overlayAcessorios">
-          <div class="TextContent">
+        <div class="overlayaccessories">
+          <div class="overlay-content">
             <p>Veja Informações <br />Sobre Esse Produto</p>
-            <a class="SaberMais" href="">Clique Aqui</a>
+            <a class="btn-link" href="">Clique Aqui</a>
           </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <div id="container-atalhosDiversos">
-        <div class="Diversos">
-          <h3 class="categoriasDiversos">Loja Online</h3>
+      <div id="container-footer-linkfooter-column">
+        <div class="footer-column">
+          <h3 class="categoriasfooter-column">Loja Online</h3>
 
-          <a href="" class="atalhos">Página inicial Shop</a>
-          <a href="" class="atalhos">Compre direto, ganhe mais</a>
-          <a href="" class="atalhos">Smart Things</a>
-          <a href="" class="atalhos">Descubra AI</a>
-          <a href="" class="atalhos">Samsung Care+</a>
-          <a href="" class="atalhos">Explore</a>
+          <a href="" class="footer-link">Página inicial Shop</a>
+          <a href="" class="footer-link">Compre direto, ganhe mais</a>
+          <a href="" class="footer-link">Smart Things</a>
+          <a href="" class="footer-link">Descubra AI</a>
+          <a href="" class="footer-link">brand-logo Care+</a>
+          <a href="" class="footer-link">Explore</a>
         </div>
-        <div class="Diversos">
-          <h3 class="categoriasDiversos">Produtos</h3>
+        <div class="footer-column">
+          <h3 class="categoriasfooter-column">Produtos</h3>
 
-          <a href="" class="atalhos">Galaxy Smartphone</a
-          ><a href="" class="atalhos">Galaxy Tab</a
-          ><a href="" class="atalhos">Galaxy Book</a
-          ><a href="" class="atalhos">Galaxy Watch</a
-          ><a href="" class="atalhos">Galaxy Buds</a
-          ><a href="" class="atalhos">TVs</a
-          ><a href="" class="atalhos">Projetores</a
-          ><a href="" class="atalhos">Áudio</a
-          ><a href="" class="atalhos">Geladeiras</a
-          ><a href="" class="atalhos">Lava-Louças</a
-          ><a href="" class="atalhos">Lavanderia</a
-          ><a href="" class="atalhos">Aspiradores</a
-          ><a href="" class="atalhos">Monitores</a
-          ><a href="" class="atalhos">Acessórios</a>
-        </div>
-
-        <div class="Diversos">
-          <h3 class="categoriasDiversos">Suporte</h3>
-
-          <a href="" class="atalhos">Suporte</a
-          ><a href="" class="atalhos">Dicas & Manuais</a
-          ><a href="" class="atalhos">Buscar Suporte</a
-          ><a href="" class="atalhos">Dúvidas da Loja</a
-          ><a href="" class="atalhos">Informação de Garantia</a
-          ><a href="" class="atalhos">Localizar Assistência</a
-          ><a href="" class="atalhos">Agendar um reparo</a
-          ><a href="" class="atalhos">Acompanhar Meu reparo</a
-          ><a href="" class="atalhos">Custo de Reparo</a
-          ><a href="" class="atalhos">Chat</a
-          ><a href="" class="atalhos">WhatsApp Chat</a
-          ><a href="" class="atalhos">Telefones</a
-          ><a href="" class="atalhos">Atendimento em Libras</a
-          ><a href="" class="atalhos">E-mail para o CEO</a>
+          <a href="" class="footer-link">Galaxy Smartphone</a
+          ><a href="" class="footer-link">Galaxy Tab</a
+          ><a href="" class="footer-link">Galaxy Book</a
+          ><a href="" class="footer-link">Galaxy Watch</a
+          ><a href="" class="footer-link">Galaxy Buds</a
+          ><a href="" class="footer-link">TVs</a
+          ><a href="" class="footer-link">Projetores</a
+          ><a href="" class="footer-link">Áudio</a
+          ><a href="" class="footer-link">Geladeiras</a
+          ><a href="" class="footer-link">Lava-Louças</a
+          ><a href="" class="footer-link">Lavanderia</a
+          ><a href="" class="footer-link">Aspiradores</a
+          ><a href="" class="footer-link">Monitores</a
+          ><a href="" class="footer-link">Acessórios</a>
         </div>
 
-        <div class="Diversos">
-          <h3 class="categoriasDiversos">Account</h3>
+        <div class="footer-column">
+          <h3 class="categoriasfooter-column">Suporte</h3>
 
-          <a href="" class="atalhos">Samsung Rewards</a
-          ><a href="" class="atalhos">Minha página</a
-          ><a href="" class="atalhos">Meus produtos</a>
+          <a href="" class="footer-link">Suporte</a
+          ><a href="" class="footer-link">Dicas & Manuais</a
+          ><a href="" class="footer-link">Buscar Suporte</a
+          ><a href="" class="footer-link">Dúvidas da Loja</a
+          ><a href="" class="footer-link">Informação de Garantia</a
+          ><a href="" class="footer-link">Localizar Assistência</a
+          ><a href="" class="footer-link">Agendar um reparo</a
+          ><a href="" class="footer-link">Acompanhar Meu reparo</a
+          ><a href="" class="footer-link">Custo de Reparo</a
+          ><a href="" class="footer-link">Chat</a
+          ><a href="" class="footer-link">WhatsApp Chat</a
+          ><a href="" class="footer-link">Telefones</a
+          ><a href="" class="footer-link">Atendimento em Libras</a
+          ><a href="" class="footer-link">E-mail para o CEO</a>
         </div>
 
-        <div class="Diversos">
-          <h3 class="categoriasDiversos">Sustentabilidade</h3>
+        <div class="footer-column">
+          <h3 class="categoriasfooter-column">Account</h3>
 
-          <a href="" class="atalhos">Meio ambiente</a
-          ><a href="" class="atalhos">Segurança e Privacidade</a
-          ><a href="" class="atalhos">Acessibilidade</a
-          ><a href="" class="atalhos">Diversidade · Equidade · Inclusão</a
-          ><a href="" class="atalhos">Cidadania corporativa</a
-          ><a href="" class="atalhos">Sustentabilidade Corporativa</a>
+          <a href="" class="footer-link">brand-logo Rewards</a
+          ><a href="" class="footer-link">Minha página</a
+          ><a href="" class="footer-link">Meus produtos</a>
         </div>
 
-        <div class="Diversos">
-          <h3 class="categoriasDiversos">Quem Somos</h3>
+        <div class="footer-column">
+          <h3 class="categoriasfooter-column">Sustentabilidade</h3>
 
-          <a href="" class="atalhos">Informações da empresa</a
-          ><a href="" class="atalhos">Área de negócios</a
-          ><a href="" class="atalhos">Identidade da marca</a
-          ><a href="" class="atalhos">Carreiras</a
-          ><a href="" class="atalhos">Relações com investidores</a
-          ><a href="" class="atalhos">Notícias</a
-          ><a href="" class="atalhos">Ética</a
-          ><a href="" class="atalhos">Design Samsung</a
-          ><a href="" class="atalhos">Loja física</a
-          ><a href="" class="atalhos">Relatórios</a>
-        </div>
-      </div>
-
-      <div id="Autor">
-        <p id="Brasil-PTBR">Brasil/Português</p>
-
-        <div id="ContatosAutor">
-          <span>Contato</span>
-          <p id="ContatoNome" class="Contato">Enzo Miguel P. Da Silva</p>
-          <p id="ContatoNumero" class="Contato">(19) 98869-7421</p>
-          <p id="ContatoE-mail" class="Contato">enzoideias01@gmail.com</p>
+          <a href="" class="footer-link">Meio ambiente</a
+          ><a href="" class="footer-link">Segurança e Privacidade</a
+          ><a href="" class="footer-link">Acessibilidade</a
+          ><a href="" class="footer-link">Diversidade · Equidade · Inclusão</a
+          ><a href="" class="footer-link">Cidadania corporativa</a
+          ><a href="" class="footer-link">Sustentabilidade Corporativa</a>
         </div>
 
-        <div id="RedesAutor">
-          <img
-            class="Rede"
-            src="https://cdn-icons-png.flaticon.com/512/2496/2496097.png"
-            alt="Icone LinkedIn"
-          />
-          <img
-            id="RedeInstagram"
-            src="https://static.vecteezy.com/system/resources/previews/018/930/415/non_2x/instagram-logo-instagram-icon-transparent-free-png.png"
-            alt="Icone Instagram"
-          />
-          <img
-            class="Rede"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png"
-            alt="Icone Facebook"
-          />
+        <div class="footer-column">
+          <h3 class="categoriasfooter-column">Quem Somos</h3>
+
+          <a href="" class="footer-link">Informações da empresa</a
+          ><a href="" class="footer-link">Área de negócios</a
+          ><a href="" class="footer-link">Identidade da marca</a
+          ><a href="" class="footer-link">Carreiras</a
+          ><a href="" class="footer-link">Relações com investidores</a
+          ><a href="" class="footer-link">Notícias</a
+          ><a href="" class="footer-link">Ética</a
+          ><a href="" class="footer-link">Design brand-logo</a
+          ><a href="" class="footer-link">Loja física</a
+          ><a href="" class="footer-link">Relatórios</a>
         </div>
       </div>
     </footer>

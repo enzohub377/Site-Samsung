@@ -1,36 +1,37 @@
-const trocarNovidade = document.getElementById("mudarImage");
+const featuredImage = document.getElementById("featured-image");
 
-const imgOriginal = "Imagens/Novo Galaxy Watch Samsung.svg";
-const imgPrata = "Imagens/Galaxy Watch Prata.svg";
-const imgGrafite = "Imagens/Galaxy Watch Grafite.svg";
+const imgOriginal = "assets/galaxy-watch-new.svg";
+const imgPrata = "assets/galaxy-watch-silver.svg";
+const imgGrafite = "assets/galaxy-watch-graphite.svg";
 
 let imageFixa = null;
 let corEscolhidaAtivo = null;
 
-function trocarTransition(Element, src) {
-  Element.style.opacity = 0;
-  Element.style.transform = "scale(0.95)";
+function trocarTransition(element, src) {
+  element.style.opacity = 0;
+  element.style.transform = "scale(0.95)";
 
   setTimeout(() => {
-    Element.src = src;
-    Element.style.opacity = 1;
-    Element.style.transform = "scale(1)";
+    element.src = src;
+    element.style.opacity = 1;
+    element.style.transform = "scale(1)";
   }, 250);
 }
 
 function ativarCorEscolhida(elemento, corFundo) {
   if (corEscolhidaAtivo) {
-    corEscolhidaAtivo.classList.remove("Ativo");
+    corEscolhidaAtivo.classList.remove("active");
   }
 
-  elemento.classList.add("Ativo");
+  elemento.classList.add("active");
   corEscolhidaAtivo = elemento;
 
   fundoCor.style.backgroundColor = corFundo;
 }
 
 const labelCor = document.createElement("span");
-labelCor.classList.add("label-cor");
+labelCor.classList.add("color-label");
+
 labelCor.style.position = "absolute";
 labelCor.style.fontSize = "22.5px";
 labelCor.style.fontWeight = "600";
@@ -50,93 +51,111 @@ function esconderLabel() {
   labelCor.style.display = "none";
 }
 
-EscolhaPrata.addEventListener("mouseover", function () {
-  if (!imageFixa) trocarTransition(trocarNovidade, imgPrata);
+const silverOption = document.getElementById("EscolhaPrata");
+const graphiteOption = document.getElementById("EscolhaGrafite");
+
+silverOption.addEventListener("mouseover", () => {
+  if (!imageFixa) trocarTransition(featuredImage, imgPrata);
 });
 
-EscolhaGrafite.addEventListener("mouseover", function () {
-  if (!imageFixa) trocarTransition(trocarNovidade, imgGrafite);
+graphiteOption.addEventListener("mouseover", () => {
+  if (!imageFixa) trocarTransition(featuredImage, imgGrafite);
 });
 
-EscolhaPrata.addEventListener("mouseout", function () {
-  if (!imageFixa) trocarTransition(trocarNovidade, imgOriginal);
+silverOption.addEventListener("mouseout", () => {
+  if (!imageFixa) trocarTransition(featuredImage, imgOriginal);
 });
 
-EscolhaGrafite.addEventListener("mouseout", function () {
-  if (!imageFixa) trocarTransition(trocarNovidade, imgOriginal);
+graphiteOption.addEventListener("mouseout", () => {
+  if (!imageFixa) trocarTransition(featuredImage, imgOriginal);
 });
 
-EscolhaPrata.addEventListener("click", (e) => {
+silverOption.addEventListener("click", (e) => {
   e.stopPropagation();
+
   imageFixa = imgPrata;
-  trocarTransition(trocarNovidade, imageFixa);
-  ativarCorEscolhida(EscolhaPrata, corPrata);
-  mostrarLabel(EscolhaPrata, "Prata");
+
+  trocarTransition(featuredImage, imageFixa);
+
+  ativarCorEscolhida(silverOption, corPrata);
+
+  mostrarLabel(silverOption, "Prata");
 });
 
-EscolhaGrafite.addEventListener("click", (e) => {
+graphiteOption.addEventListener("click", (e) => {
   e.stopPropagation();
+
   imageFixa = imgGrafite;
-  trocarTransition(trocarNovidade, imageFixa);
-  ativarCorEscolhida(EscolhaGrafite, corGrafite);
-  mostrarLabel(EscolhaGrafite, "Grafite");
+
+  trocarTransition(featuredImage, imageFixa);
+
+  ativarCorEscolhida(graphiteOption, corGrafite);
+
+  mostrarLabel(graphiteOption, "Grafite");
 });
 
 document.addEventListener("click", () => {
   imageFixa = null;
-  trocarTransition(trocarNovidade, imgOriginal);
+
+  trocarTransition(featuredImage, imgOriginal);
 
   if (corEscolhidaAtivo) {
-    corEscolhidaAtivo.classList.remove("Ativo");
+    corEscolhidaAtivo.classList.remove("active");
     corEscolhidaAtivo = null;
   }
 
   esconderLabel();
+
   fundoCor.style.backgroundColor = fundoOriginal;
 });
 
 const fundoCor = document.getElementById("pontualidadeCores");
-const fundoPrata = document.getElementById("EscolhaPrata");
-const fundoGrafite = document.getElementById("EscolhaGrafite");
+
+const fundoPrata = silverOption;
+const fundoGrafite = graphiteOption;
 
 const fundoOriginal = "white";
 const corPrata = "#c9cccc";
 const corGrafite = "#5b6166";
 
 if (fundoCor && fundoPrata && fundoGrafite) {
-  fundoPrata.addEventListener("mouseover", function () {
+  fundoPrata.addEventListener("mouseover", () => {
     fundoCor.style.backgroundColor = corPrata;
   });
 
-  fundoPrata.addEventListener("mouseout", function () {
-    if (!corEscolhidaAtivo) fundoCor.style.backgroundColor = fundoOriginal;
+  fundoPrata.addEventListener("mouseout", () => {
+    if (!corEscolhidaAtivo) {
+      fundoCor.style.backgroundColor = fundoOriginal;
+    }
   });
 
-  fundoGrafite.addEventListener("mouseover", function () {
+  fundoGrafite.addEventListener("mouseover", () => {
     fundoCor.style.backgroundColor = corGrafite;
   });
 
-  fundoGrafite.addEventListener("mouseout", function () {
-    if (!corEscolhidaAtivo) fundoCor.style.backgroundColor = fundoOriginal;
+  fundoGrafite.addEventListener("mouseout", () => {
+    if (!corEscolhidaAtivo) {
+      fundoCor.style.backgroundColor = fundoOriginal;
+    }
   });
 }
 
-const menuBurger = document.querySelector('.menu-burger')
-const nav = document.querySelector('nav')
-const containerAtalhos = document.querySelector('#containerAtalhos')
+const menuBurger = document.querySelector(".menu-burger");
+const nav = document.querySelector("nav");
+const navMenu = document.querySelector("#nav-menu");
 
-menuBurger.addEventListener('click', () => {
-  menuBurger.classList.toggle('active')
-  nav.classList.toggle('active')
-  containerAtalhos.classList.toggle('active')
-})
+menuBurger.addEventListener("click", () => {
+  menuBurger.classList.toggle("active");
+  nav.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
 
-const atalhos = document.querySelectorAll('.Atalho')
+const navLinks = document.querySelectorAll(".nav-link");
 
-atalhos.forEach(atalho => {
-  atalho.addEventListener('click', () => {
-    menuBurger.classList.remove('active')
-    nav.classList.remove('active')
-    containerAtalhos.classList.remove('active')
-  })
-})
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuBurger.classList.remove("active");
+    nav.classList.remove("active");
+    navMenu.classList.remove("active");
+  });
+});
