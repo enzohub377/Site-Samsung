@@ -114,7 +114,7 @@ const fundoCor = document.getElementById("pontualidadeCores");
 const fundoPrata = silverOption;
 const fundoGrafite = graphiteOption;
 
-const fundoOriginal = "white";
+const fundoOriginal = "transparent";
 const corPrata = "#c9cccc";
 const corGrafite = "#5b6166";
 
@@ -125,7 +125,7 @@ if (fundoCor && fundoPrata && fundoGrafite) {
 
   fundoPrata.addEventListener("mouseout", () => {
     if (!corEscolhidaAtivo) {
-      fundoCor.style.backgroundColor = fundoOriginal;
+      fundoCor.style.background = fundoOriginal;
     }
   });
 
@@ -135,7 +135,7 @@ if (fundoCor && fundoPrata && fundoGrafite) {
 
   fundoGrafite.addEventListener("mouseout", () => {
     if (!corEscolhidaAtivo) {
-      fundoCor.style.backgroundColor = fundoOriginal;
+      fundoCor.style.background = fundoOriginal;
     }
   });
 }
