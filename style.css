@@ -217,7 +217,7 @@ h3 {
   color: white;
 }
 
-.pontualidadeCores{
+.pontualidadeCores {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -273,25 +273,34 @@ h3 {
 }
 
 #Nome {
+  border: 1px solid #5b6166;
   padding: 5px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   border-radius: 25px;
   align-items: center;
-  background-color: #d7c7c7;
+  backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-}
 
-#product-name {
-  background-color: #d5c5c5;
-  font-weight: bold;
+  & .product-name {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  & p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #2189ff;
+  }
 }
 
 #purchase-card {
+  border: 1px solid #5b6166;
+  backdrop-filter: blur(10px);
   padding: 10px;
   border-radius: 25px;
-  background-color: #d7c7c7;
   margin-top: 40px;
   display: flex;
   align-items: center;
@@ -301,16 +310,13 @@ h3 {
 }
 
 #NovoOferta {
-  font-size: 15px;
-}
-
-h5 {
-  font-weight: 450;
+  font-size: 17px;
+  color: white;
 }
 
 h4 {
   color: #2189ff;
-  font-weight: bold;
+  font-size: 18px;
 }
 
 #Comprarhero {
@@ -318,14 +324,9 @@ h4 {
   color: white;
   padding: 10px;
   font-weight: 450;
-  background-color: #2189ff;
-  border-radius: 25px;
-  border: none;
-  transition: 1s ease;
-}
-
-#Comprarhero:hover {
-  transform: scale(1.15);
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid #2189ff;
 }
 
 .section-header {
@@ -370,7 +371,7 @@ h2 {
   width: 250px;
 }
 
-p {
+.Information-Card {
   background-color: white;
   border-radius: 20px;
   padding: 5px;
