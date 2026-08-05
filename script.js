@@ -92,8 +92,20 @@ graphiteOption.addEventListener('click', (e) => {
 
   ativarCorEscolhida(graphiteOption, corGrafite);
 
+  function mostrarLabel(chosenColor, colorText) {
+    chosenColor.textContent = colorText;
+    chosenColor.style.color = 'white';
+    chosenColor.style.fontSize = '16px';
+    chosenColor.style.fontWeight = 'bold';
+    chosenColor.style.backgroundColor = 'red';
+    chosenColor.style.textAlign = 'center';
+    chosenColor.style.display = 'flex';
+    chosenColor.style.alignItems = 'center';
+    chosenColor.style.justifyContent = 'center';
+    chosenColor.style.transition = 'textContent 1s ease'
+  }
+
   mostrarLabel(graphiteOption, 'Grafite');
-  graphiteOption.style.color = 'white';
 });
 
 document.addEventListener('click', () => {
