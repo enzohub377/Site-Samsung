@@ -7,6 +7,14 @@ const imgGrafite = 'assets/galaxy-watch-graphite.svg';
 let imageFixa = null;
 let corEscolhidaAtivo = null;
 
+const fundoCor = document.getElementById('colorPicker');
+const silverOption = document.getElementById('EscolhaPrata');
+const graphiteOption = document.getElementById('EscolhaGrafite');
+
+const fundoOriginal = 'transparent';
+const corPrata = '#c9cccc';
+const corGrafite = '#5b6166';
+
 function trocarTransition(element, src) {
   element.style.opacity = 0;
   element.style.transform = 'scale(0.95)';
@@ -33,26 +41,34 @@ const labelCor = document.createElement('span');
 labelCor.classList.add('color-label');
 
 labelCor.style.position = 'absolute';
-labelCor.style.fontSize = '22.5px';
-labelCor.style.fontWeight = '600';
+labelCor.style.fontSize = '14px';
 labelCor.style.top = '-45px';
 labelCor.style.left = '50%';
 labelCor.style.transform = 'translateX(-50%)';
 labelCor.style.pointerEvents = 'none';
-labelCor.style.display = 'none';
+labelCor.style.color = 'white';
+labelCor.style.border = '1px solid #5b6166';
+labelCor.style.padding = '3px 8px';
+labelCor.style.borderRadius = '10px';
+labelCor.style.backdropFilter = 'blur(10px)';
+labelCor.style.opacity = '0';
+labelCor.style.visibility = 'hidden';
+labelCor.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
 
-function mostrarLabel(circulo, texto) {
+if (fundoCor) {
+  fundoCor.appendChild(labelCor);
+}
+
+function mostrarLabel(texto) {
   labelCor.textContent = texto;
-  circulo.appendChild(labelCor);
-  labelCor.style.display = 'block';
+  labelCor.style.visibility = 'visible';
+  labelCor.style.opacity = '1';
 }
 
 function esconderLabel() {
-  labelCor.style.display = 'none';
+  labelCor.style.opacity = '0';
+  labelCor.style.visibility = 'hidden';
 }
-
-const silverOption = document.getElementById('EscolhaPrata');
-const graphiteOption = document.getElementById('EscolhaGrafite');
 
 silverOption.addEventListener('mouseover', () => {
   if (!imageFixa) trocarTransition(featuredImage, imgPrata);
@@ -74,38 +90,20 @@ silverOption.addEventListener('click', (e) => {
   e.stopPropagation();
 
   imageFixa = imgPrata;
-
   trocarTransition(featuredImage, imageFixa);
-
   ativarCorEscolhida(silverOption, corPrata);
 
-  mostrarLabel(silverOption, 'Prata');
-  silverOption.style.color = 'white';
+  mostrarLabel('Prata');
 });
 
 graphiteOption.addEventListener('click', (e) => {
   e.stopPropagation();
 
   imageFixa = imgGrafite;
-
   trocarTransition(featuredImage, imageFixa);
-
   ativarCorEscolhida(graphiteOption, corGrafite);
 
-  function mostrarLabel(chosenColor, colorText) {
-    chosenColor.textContent = colorText;
-    chosenColor.style.color = 'white';
-    chosenColor.style.fontSize = '16px';
-    chosenColor.style.fontWeight = 'bold';
-    chosenColor.style.backgroundColor = 'red';
-    chosenColor.style.textAlign = 'center';
-    chosenColor.style.display = 'flex';
-    chosenColor.style.alignItems = 'center';
-    chosenColor.style.justifyContent = 'center';
-    chosenColor.style.transition = 'textContent 1s ease'
-  }
-
-  mostrarLabel(graphiteOption, 'Grafite');
+  mostrarLabel('Grafite');
 });
 
 document.addEventListener('click', () => {
@@ -120,17 +118,11 @@ document.addEventListener('click', () => {
 
   esconderLabel();
 
-  fundoCor.style.backgroundColor = fundoOriginal;
+  if (fundoCor) fundoCor.style.backgroundColor = fundoOriginal;
 });
-
-const fundoCor = document.getElementById('colorPicker');
 
 const fundoPrata = silverOption;
 const fundoGrafite = graphiteOption;
-
-const fundoOriginal = 'transparent';
-const corPrata = '#c9cccc';
-const corGrafite = '#5b6166';
 
 if (fundoCor && fundoPrata && fundoGrafite) {
   fundoPrata.addEventListener('mouseover', () => {
@@ -142,6 +134,11 @@ if (fundoCor && fundoPrata && fundoGrafite) {
     if (!corEscolhidaAtivo) {
       fundoCor.style.background = fundoOriginal;
       fundoCor.style.transition = 'background-color .5s ease';
+    } else {
+      if (corEscolhidaAtivo === silverOption)
+        fundoCor.style.backgroundColor = corPrata;
+      if (corEscolhidaAtivo === graphiteOption)
+        fundoCor.style.backgroundColor = corGrafite;
     }
   });
 
@@ -154,6 +151,11 @@ if (fundoCor && fundoPrata && fundoGrafite) {
     if (!corEscolhidaAtivo) {
       fundoCor.style.background = fundoOriginal;
       fundoCor.style.transition = 'background-color .5s ease';
+    } else {
+      if (corEscolhidaAtivo === silverOption)
+        fundoCor.style.backgroundColor = corPrata;
+      if (corEscolhidaAtivo === graphiteOption)
+        fundoCor.style.backgroundColor = corGrafite;
     }
   });
 }

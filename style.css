@@ -224,8 +224,9 @@ h3 {
 }
 
 #colorPicker {
+  position: relative;
   border-radius: 20px;
-  margin-top: 60px;
+  margin-top: 80px;
   padding: 8.5px 0;
   width: 30%;
   display: flex;
