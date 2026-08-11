@@ -326,8 +326,20 @@ h4 {
   padding: 10px;
   font-weight: 450;
   background: transparent;
+  border: 1px solid #5b6166;
   border-radius: 10px;
-  border: 2px solid #2189ff;
+  transition:
+    border .5s ease,
+    background-color 0.5s ease,
+    color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+#Comprarhero:hover {
+  border: 1px solid #007bff;
+  background-color: #007bff; /* Ajuste para a cor de destaque da sua marca */
+  color: #ffffff;
+  box-shadow: 0 0 15px #007bff99;
 }
 
 .section-header {

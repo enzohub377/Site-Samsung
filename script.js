@@ -26,6 +26,19 @@ function trocarTransition(element, src) {
   }, 250);
 }
 
+function desativarSelecao() {
+  imageFixa = null;
+
+  if (corEscolhidaAtivo) {
+    corEscolhidaAtivo.classList.remove('active');
+    corEscolhidaAtivo = null;
+  }
+
+  trocarTransition(featuredImage, imgOriginal);
+  esconderLabel();
+  if (fundoCor) fundoCor.style.backgroundColor = fundoOriginal;
+}
+
 function ativarCorEscolhida(elemento, corFundo) {
   if (corEscolhidaAtivo) {
     corEscolhidaAtivo.classList.remove('active');
@@ -36,6 +49,28 @@ function ativarCorEscolhida(elemento, corFundo) {
 
   fundoCor.style.backgroundColor = corFundo;
 }
+
+silverOption.addEventListener('click', () => {
+  if (corEscolhidaAtivo === silverOption) {
+    desativarSelecao();
+  } else {
+    imageFixa = imgPrata;
+    trocarTransition(featuredImage, imageFixa);
+    ativarCorEscolhida(silverOption, corPrata);
+    mostrarLabel('Prata');
+  }
+});
+
+graphiteOption.addEventListener('click', () => {
+  if (corEscolhidaAtivo === graphiteOption) {
+    desativarSelecao();
+  } else {
+    imageFixa = imgGrafite;
+    trocarTransition(featuredImage, imageFixa);
+    ativarCorEscolhida(graphiteOption, corGrafite);
+    mostrarLabel('Grafite');
+  }
+});
 
 const labelCor = document.createElement('span');
 labelCor.classList.add('color-label');
@@ -86,41 +121,6 @@ graphiteOption.addEventListener('mouseout', () => {
   if (!imageFixa) trocarTransition(featuredImage, imgOriginal);
 });
 
-silverOption.addEventListener('click', (e) => {
-  e.stopPropagation();
-
-  imageFixa = imgPrata;
-  trocarTransition(featuredImage, imageFixa);
-  ativarCorEscolhida(silverOption, corPrata);
-
-  mostrarLabel('Prata');
-});
-
-graphiteOption.addEventListener('click', (e) => {
-  e.stopPropagation();
-
-  imageFixa = imgGrafite;
-  trocarTransition(featuredImage, imageFixa);
-  ativarCorEscolhida(graphiteOption, corGrafite);
-
-  mostrarLabel('Grafite');
-});
-
-document.addEventListener('click', () => {
-  imageFixa = null;
-
-  trocarTransition(featuredImage, imgOriginal);
-
-  if (corEscolhidaAtivo) {
-    corEscolhidaAtivo.classList.remove('active');
-    corEscolhidaAtivo = null;
-  }
-
-  esconderLabel();
-
-  if (fundoCor) fundoCor.style.backgroundColor = fundoOriginal;
-});
-
 const fundoPrata = silverOption;
 const fundoGrafite = graphiteOption;
 
@@ -160,6 +160,7 @@ if (fundoCor && fundoPrata && fundoGrafite) {
   });
 }
 
+// Responsividade Mobile
 const menuBurger = document.querySelector('.menu-burger');
 const nav = document.querySelector('nav');
 const navMenu = document.querySelector('#nav-menu');
