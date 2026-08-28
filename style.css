@@ -84,11 +84,9 @@ nav {
   align-items: center;
 }
 
-#brand-logo {
-  color: white;
-  padding: 5px;
-  border-radius: 25px;
-  margin-right: 15px;
+#brand-logo{
+  height: auto;
+  width: 100px;
 }
 
 .container-input {
