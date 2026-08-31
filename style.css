@@ -84,7 +84,7 @@ nav {
   align-items: center;
 }
 
-#brand-logo{
+#brand-logo {
   height: auto;
   width: 100px;
 }
@@ -148,10 +148,10 @@ input {
   background-size: 15px;
   padding: 10px 10px 10px 30px;
   outline: none;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
-input:focus{
+input:focus {
   transform: scale(1.05);
 }
 
@@ -349,7 +349,7 @@ h4 {
 
 #Comprarhero:hover {
   border: 1px solid #007bff;
-  background-color: #007bff; /* Ajuste para a cor de destaque da sua marca */
+  background-color: #007bff;
   color: #ffffff;
   box-shadow: 0 0 15px #007bff99;
 }
@@ -364,107 +364,77 @@ h4 {
 #computers,
 #accessories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
   max-width: 1200px;
   margin: 0 auto 50px auto;
-  padding: 40px 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: none;
 }
 
-#mobile-products {
-  background-color: #0a0a0a;
-}
-
-#tv-audio {
-  background-color: #121212;
-}
-
-#computers {
-  background-color: #181818;
-}
-
-#accessories {
-  background-color: #0d0d0d;
-}
-
-.card-mobile,
-.cardtv-audio,
-.cardcomputers,
-.cardaccessories {
+.product-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   width: 100%;
-  height: 380px;
-  border-radius: 16px;
+  height: 350px;
+  padding: 24px 16px;
+  border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #1e1e1e;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
-  margin: 0; /* Remove margem automática antiga */
+    border-color 0.3s ease,
+    transform 0.3s ease;
+  margin: 0;
 }
 
-.card-mobile:hover,
-.cardtv-audio:hover,
-.cardcomputers:hover,
-.cardaccessories:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(33, 137, 255, 0.25);
-  border-color: #2189ff;
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: none;
 }
 
-.card-mobile__image,
+.Itensmobile,
 .Itenstv-audio,
 .Itenscomputers,
 .Itensaccessories {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 16px;
-  display: block;
-  transition: transform 0.5s ease;
+  width: auto;
+  max-width: 80%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
-.card-mobile:hover .card-mobile__image,
-.cardtv-audio:hover .Itenstv-audio,
-.cardcomputers:hover .Itenscomputers,
-.cardaccessories:hover .Itensaccessories {
-  transform: scale(1.08);
+.product-card:hover .Itensmobile,
+.product-card:hover .Itenstv-audio,
+.product-card:hover .Itenscomputers,
+.product-card:hover .Itensaccessories {
+  transform: scale(1.04);
 }
 
-.card-mobile__overlay,
+.overlaymobile,
 .overlaytv-audio,
 .overlaycomputers,
 .overlayaccessories {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  top: auto;
+  left: auto;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(4px);
+  height: auto;
+  background: transparent;
+  backdrop-filter: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  border-radius: 16px;
-  transition: opacity 0.3s ease;
-  padding: 20px;
-}
-
-.card-mobile:hover .card-mobile__overlay,
-.cardtv-audio:hover .overlaytv-audio,
-.cardcomputers:hover .overlaycomputers,
-.cardaccessories:hover .overlayaccessories {
   opacity: 1;
+  padding: 0;
 }
 
 .overlay-content {
@@ -472,35 +442,37 @@ h4 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 16px;
-  gap: 16px;
+  padding: 0;
+  gap: 12px;
 }
 
 .information-card {
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #111111;
-  border-radius: 12px;
-  padding: 10px 14px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.3;
+  background-color: transparent;
+  color: #a0a0a0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
 }
 
 .btn-link {
   color: #ffffff;
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 400;
   text-decoration: none;
-  background-color: #2189ff;
-  padding: 8px 18px;
+  background-color: transparent;
+  padding: 6px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .btn-link:hover {
-  background-color: #0066e0;
-  transform: scale(1.05);
+  background-color: #ffffff;
+  color: #000000;
+  transform: none;
 }
 
 @keyframes giro {
@@ -734,7 +706,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .card-mobile {
+  .product-card {
     max-width: 280px;
   }
 
@@ -748,7 +720,7 @@ footer {
     width: 100%;
   }
 
-  .cardtv-audio {
+  .product-card {
     height: 100%;
     width: 100%;
   }
@@ -768,7 +740,7 @@ footer {
     width: 100%;
   }
 
-  .cardcomputers {
+  .product-card {
     transform: scale(0.95);
     height: 80%;
     width: 90%;
@@ -790,7 +762,7 @@ footer {
     width: 100%;
   }
 
-  .cardaccessories {
+  .product-card {
     transform: scale(0.95);
     height: 80%;
     width: 80%;
