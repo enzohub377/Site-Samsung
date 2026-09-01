@@ -38,6 +38,12 @@ body {
   background-color: black;
 }
 
+svg{
+  width: auto;
+  height: 20px;
+  fill: #ffffff
+}
+
 .background-content {
   background-color: #ffffff;
   background-color: #000000;
@@ -371,6 +377,7 @@ h4 {
   padding: 20px;
   background-color: transparent;
   box-shadow: none;
+  scroll-margin-top: 120px;
 }
 
 .product-card {
