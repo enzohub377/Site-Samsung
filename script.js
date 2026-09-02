@@ -1,3 +1,20 @@
+const themeToggleBtn = document.getElementById('themeToggle');
+
+const themeSalved = localStorage.getItem('theme');
+if (themeSalved === 'light') {
+  document.body.classList.add('light-theme');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light-theme');
+
+  if (document.body.classList.contains('light-theme')) {
+    localStorage.setItem('theme', 'light');
+  } else {
+    localStorage.setItem('theme', 'dark');
+  }
+});
+
 const featuredImage = document.getElementById('featured-image');
 
 const imgOriginal = 'assets/galaxy-watch-new.svg';
