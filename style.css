@@ -180,7 +180,7 @@ body.light-theme .background-content {
 }
 
 body.light-theme header {
-  border-bottom: 1px solid #d1d5db;
+  border-bottom: 1px solid #a8a8a979;
 }
 
 body.light-theme input {
@@ -206,13 +206,30 @@ body.light-theme #NovoOferta {
   color: #1a1a1a;
 }
 
+body.light-theme .product-name{
+  color: #000000;
+}
+
+body.light-theme #comprarHero{
+  color: #000000;
+  transition: color .5s ease;
+}
+
+body.light-theme #comprarHero:hover{
+  color: white;
+}
+
 body.light-theme .product-card {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
 }
 
+body.light-theme .product-card:hover{
+  border-color: #363636;
+}
+
 body.light-theme .information-card {
-  color: #4b5563;
+  color: #000000;
 }
 
 body.light-theme .btn-link {
@@ -235,7 +252,12 @@ body.light-theme .categoriasfooter-column {
 }
 
 body.light-theme .footer-link {
-  color: #4b5563;
+  color: #232323;
+  transition: color .2s ease;
+}
+
+body.light-theme .footer-link:hover{
+  color: #2189ff;
 }
 
 body.light-theme #container-footer-linkfooter-column{
@@ -340,6 +362,7 @@ article {
     #2a292938 0px 15px 12px;
   display: flex;
   align-items: flex-start;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -422,7 +445,7 @@ h3 {
     rgb(51, 51, 51) 0px 0px 0px 3px;
 }
 
-#Nome {
+#Name {
   border: 1px solid #5b6166;
   padding: 5px;
   margin-top: 20px;
@@ -439,10 +462,10 @@ h3 {
     font-size: 20px;
   }
 
-  & p {
+  & span {
+    color: #2189ff;
     margin-top: 10px;
     font-size: 18px;
-    color: #2189ff;
   }
 }
 
@@ -469,7 +492,7 @@ h4 {
   font-size: 18px;
 }
 
-#Comprarhero {
+#comprarHero {
   font-size: 20px;
   color: white;
   padding: 10px;
@@ -484,7 +507,7 @@ h4 {
     box-shadow 0.5s ease;
 }
 
-#Comprarhero:hover {
+#comprarHero:hover {
   border: 1px solid #007bff;
   background-color: #007bff;
   color: #ffffff;
